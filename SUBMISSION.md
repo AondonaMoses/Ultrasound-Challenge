@@ -2,27 +2,37 @@
 
 All submissions must be made through **GitHub Classroom** using a **COG-compliant Docker container**.
 
-Your submission should:
-- Accept an ultrasound image as input
-- Return a predicted binary segmentation mask (tumor vs background)
-- Follow the input/output format exactly
+Your submission must:
+
+- Accept an **ultrasound image** as input
+- Return a **binary segmentation mask** as output (tumor vs. background)
+- Follow the exact input/output format
+- Be structured using COG with the required files listed below
 
 ---
 
-## 📦 COG Container Requirements
+## 📦 Required Files
 
-Your submission must include:
+Your repository should include:
 
-- A valid `.cog.yaml` file
-- An `inference.py` or `predict.py` script that performs prediction
-- A `Dockerfile` (if additional customization is needed)
-- All required dependencies
+- `cog.yaml`  
+- `predict.py` (must contain the `Predictor` class with `setup()` and `predict()` methods)
+- `model.py` (your model architecture)
+- `best_unet_model.pth` (your trained model weights)
+- Optionally, `Dockerfile` if advanced customization is needed
 
 ---
 
-## 🧠 Input/Output Format
+## ⚙️ Example `cog.yaml`
 
-- **Input**: A single `.png` ultrasound image
-- **Output**: A single `.png` binary mask (same name with `_mask` suffix)
+```yaml
+build:
+  python_version: "3.8"
+  python_packages:
+    - torch
+    - torchvision
+    - numpy
+    - opencv-python
+    - pillow
 
-Example:
+predict: "predict.py:Predictor"
