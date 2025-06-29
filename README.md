@@ -55,12 +55,12 @@ Scores are ranked based on a weighted metric:
 
 The leaderboard is updated regularly during the competition.
 
-| Rank | Team / Participant       | Submission ID | Dice Coefficient | IoU   | Notes               |
-|------|---------------------------|----------------|------------------|-------|---------------------|
-| 1    | Team TumorTech            | SUBM-0007      | 0.873            | 0.804 | Early submission    |
-| 2    | Ultrasound Ninjas         | SUBM-0010      | 0.858            | 0.791 |                     |
-| 3    | Dr. Segmentor             | SUBM-0003      | 0.842            | 0.774 |                     |
-| ...  | ...                       | ...            | ...              | ...   | ...                 |
+| Rank | Team / Participant       | Submission ID | Dice Coefficient | IoU   |
+|------|---------------------------|----------------|------------------|-------|
+| 1    | Team TumorTech            | SUBM-0007      | 0.873            | 0.804 |
+| 2    | Ultrasound Ninjas         | SUBM-0010      | 0.858            | 0.791 |
+| 3    | Dr. Segmentor             | SUBM-0003      | 0.842            | 0.774 |
+| ...  | ...                       | ...            | ...              | ...   |
 
 > The leaderboard reflects the **best score per team**. Daily submission limit is 2 per team.
 
